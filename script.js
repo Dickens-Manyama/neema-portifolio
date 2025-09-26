@@ -121,7 +121,6 @@ const translations = {
         'leadership-caption-2': 'Parliamentary Sessions',
         'leadership-caption-3': 'Community Leadership',
         'leadership-caption-4': 'Policy Advocacy',
-        'leadership-caption-5': 'Mentorship Programs',
         'leadership-caption-7': 'Regional Conferences',
         'leadership-caption-8': 'Climate Summits',
         
@@ -252,7 +251,6 @@ const translations = {
         'leadership-caption-2': 'Vikao vya Bunge',
         'leadership-caption-3': 'Uongozi wa Jamii',
         'leadership-caption-4': 'Utetezi wa Sera',
-        'leadership-caption-5': 'Mipango ya Ushauri',
         'leadership-caption-7': 'Mikutano ya Kikanda',
         'leadership-caption-8': 'Mikutano ya Tabianchi',
         
