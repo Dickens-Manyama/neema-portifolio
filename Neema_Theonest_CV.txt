@@ -1,0 +1,19 @@
+# CV File Placeholder
+
+This is a placeholder file for Neema Theonest's CV.
+
+## To activate CV download:
+
+1. **Replace this file** with your actual PDF CV
+2. **Rename it** to: `Neema_Theonest_CV.pdf`
+3. **Place it** in the root directory (same folder as index.html)
+
+The website's download button will automatically work once the PDF file is in place.
+
+## Recommended CV format:
+- **File format**: PDF
+- **File size**: Under 2MB  
+- **File name**: `Neema_Theonest_CV.pdf` (exact name)
+- **Content**: Professional CV with environmental focus
+
+Once you replace this file with your actual PDF CV, visitors will be able to download it directly from your website.
