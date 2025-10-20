@@ -576,33 +576,41 @@ function handleCvDownload(e) {
     
     // Check if CV file exists (use the PDF in project root)
     const cvFileName = 'neema-CV.pdf';
-    
-    // Create a temporary link for download
-    const link = document.createElement('a');
-    link.href = cvFileName;
-    link.download = cvFileName;
-    
-    // Try to download, if file doesn't exist, show message
-    link.onclick = function() {
-        setTimeout(() => {
+    // First, try a HEAD request to verify the file exists on the server
+    fetch(cvFileName, { method: 'HEAD' })
+        .then(response => {
+            if (response.ok) {
+                // Create a temporary link for download and trigger it
+                const link = document.createElement('a');
+                link.href = cvFileName;
+                link.download = cvFileName;
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+
+                // Track download attempt
+                if (typeof gtag !== 'undefined') {
+                    gtag('event', 'cv_download', {
+                        'event_category': 'engagement',
+                        'event_label': 'cv_download_success'
+                    });
+                }
+            } else {
+                const message = currentLang === 'sw' ? 
+                    'Faili la CV halijawekwa bado. Tafadhali wasiliana nami kwa barua pepe.' :
+                    'CV file not yet available. Please contact me via email for my CV.';
+                showNotification(message, 'info');
+            }
+        })
+        .catch(() => {
             const message = currentLang === 'sw' ? 
                 'Faili la CV halijawekwa bado. Tafadhali wasiliana nami kwa barua pepe.' :
                 'CV file not yet available. Please contact me via email for my CV.';
             showNotification(message, 'info');
-        }, 100);
-    };
-    
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
+        });
     
     // Track download attempt
-    if (typeof gtag !== 'undefined') {
-        gtag('event', 'cv_download', {
-            'event_category': 'engagement',
-            'event_label': 'cv_download_attempt'
-        });
-    }
+    // analytics handled inside the fetch success branch
 }
 
 // ===== Notification System =====
