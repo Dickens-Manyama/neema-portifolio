@@ -540,7 +540,7 @@ function handleFormSubmit(e) {
         // Create mailto link as fallback
         const subject = encodeURIComponent('Portfolio Contact Form');
         const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`);
-        const mailtoLink = `mailto:neema.theonest@example.com?subject=${subject}&body=${body}`;
+    const mailtoLink = `mailto:neematheonest67@gmail.com?subject=${subject}&body=${body}`;
         
         // Open email client
         window.location.href = mailtoLink;
@@ -574,8 +574,8 @@ function hideLoadingState() {
 function handleCvDownload(e) {
     e.preventDefault();
     
-    // Check if CV file exists
-    const cvFileName = 'Neema_Theonest_CV.pdf';
+    // Check if CV file exists (use the PDF in project root)
+    const cvFileName = 'neema-CV.pdf';
     
     // Create a temporary link for download
     const link = document.createElement('a');
@@ -858,3 +858,43 @@ if (typeof module !== 'undefined' && module.exports) {
         translations
     };
 }
+
+// ===== Activities Carousel =====
+function initializeActivitiesCarousel() {
+    const container = document.getElementById('activities-container');
+    if (!container) return;
+
+    const cards = Array.from(container.querySelectorAll('.activity-card'));
+
+    // Apply background images from data attributes
+    cards.forEach(card => {
+        const img = card.getAttribute('data-img');
+        if (img) {
+            card.style.backgroundImage = `url('${img}')`;
+        }
+    });
+
+    let current = 0;
+    const total = cards.length;
+    const interval = 4000; // 4s per activity
+
+    function show(index) {
+        cards.forEach((c, i) => {
+            c.setAttribute('aria-hidden', i === index ? 'false' : 'true');
+        });
+    }
+
+    // Initial show
+    show(current);
+
+    // Cycle
+    setInterval(() => {
+        current = (current + 1) % total;
+        show(current);
+    }, interval);
+}
+
+// Initialize activities after DOM ready
+document.addEventListener('DOMContentLoaded', function() {
+    initializeActivitiesCarousel();
+});

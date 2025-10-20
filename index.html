@@ -139,10 +139,10 @@
                         Dedicated to conservation, climate action, and youth empowerment.
                     </p>
                     <div class="hero-buttons">
-                        <a href="#" class="btn btn-primary" id="download-cv" data-key="btn-cv">
-                            <i class="fas fa-download"></i>
-                            Download CV
-                        </a>
+                        <a href="/neema-CV.pdf" download class="btn btn-primary" id="download-cv" data-key="btn-cv" aria-label="Download CV">
+                                <i class="fas fa-download"></i>
+                                Download CV
+                            </a>
                         <a href="#contact" class="btn btn-secondary" data-key="btn-contact">
                             <i class="fas fa-envelope"></i>
                             Contact Me
@@ -150,9 +150,37 @@
                     </div>
                 </div>
                 
+                <!-- Activities showcase (animated) -->
+                <div class="hero-activities" aria-label="Activities showcase" role="region">
+                    <div class="activities-container" id="activities-container">
+                        <!-- Activity cards populated by JS for sequential animation -->
+                        <div class="activity-card" data-title="Climate Advocacy" data-img="plant.jpg" aria-hidden="false">
+                            <div class="activity-overlay"></div>
+                            <h3 class="activity-title">Climate Advocacy</h3>
+                        </div>
+                        <div class="activity-card" data-title="Sexual Reproductive Health Advocacy" data-img="charity.jpg" aria-hidden="true">
+                            <div class="activity-overlay"></div>
+                            <h3 class="activity-title">Sexual Reproductive Health Advocacy</h3>
+                        </div>
+                        <div class="activity-card" data-title="Leadership & Youth Empowerment" data-img="l1.jpg" aria-hidden="true">
+                            <div class="activity-overlay"></div>
+                            <h3 class="activity-title">Leadership & Youth Empowerment</h3>
+                        </div>
+                        <div class="activity-card" data-title="Mental Health Awareness" data-img="meeting6.jpg" aria-hidden="true">
+                            <div class="activity-overlay"></div>
+                            <h3 class="activity-title">Mental Health Awareness</h3>
+                        </div>
+                        <div class="activity-card" data-title="Generosity / Philanthropy" data-img="givingback.jpg" aria-hidden="true">
+                            <div class="activity-overlay"></div>
+                            <h3 class="activity-title">Generosity / Philanthropy</h3>
+                        </div>
+                    </div>
+                </div>
+
                 <div class="hero-image">
                     <div class="hero-image-container">
-                        <img src="about.jpg" alt="Professional portrait of Neema Theonest, Environmental & Natural Resources Conserver" class="hero-portrait" loading="eager">
+                        <!-- Display Picture (DP) - use suit image if available -->
+                        <img src="profile picture.webp" alt="Neema Theonest - profile portrait" class="hero-portrait dp" loading="eager">
                         <div class="hero-image-decoration"></div>
                     </div>
                 </div>
@@ -233,9 +261,9 @@
                 <div class="section-line"></div>
             </div>
             
-            <div class="leadership-content">
+                <div class="leadership-content">
                 <div class="leadership-image">
-                    <img src="meeting3.jpg" alt="Neema Theonest participating in East Africa Community Youth Parliament meetings and leadership activities" class="leadership-img" loading="lazy">
+                    <img src="meeting3.jpg" alt="Youth Parliament activities - Neema Theonest" class="leadership-img" loading="lazy">
                 </div>
                 
                 <div class="leadership-text">
@@ -270,44 +298,14 @@
                 </div>
             </div>
             
-            <!-- Leadership Gallery -->
+            <!-- Leadership Gallery — single representative image -->
             <div class="leadership-gallery">
                 <h3 class="gallery-title" data-key="leadership-gallery-title">Leadership & Parliamentary Activities</h3>
                 <div class="image-gallery">
-                    <div class="gallery-item">
-                        <img src="l1.jpg" alt="Leadership training and capacity building sessions for youth empowerment" class="gallery-img" loading="lazy">
+                    <div class="gallery-item single-image-card">
+                        <img src="meeting3.jpg" alt="Youth Parliament - Neema Theonest" class="gallery-img" loading="lazy">
                         <div class="gallery-overlay">
-                            <p class="gallery-caption" data-key="leadership-caption-1">Leadership Training</p>
-                        </div>
-                    </div>
-                    <div class="gallery-item">
-                        <img src="l2.jpg" alt="Youth parliament sessions and legislative discussions on environmental policy" class="gallery-img" loading="lazy">
-                        <div class="gallery-overlay">
-                            <p class="gallery-caption" data-key="leadership-caption-2">Parliamentary Sessions</p>
-                        </div>
-                    </div>
-                    <div class="gallery-item">
-                        <img src="l3.jpg" alt="Community leadership engagement and stakeholder consultation meetings" class="gallery-img" loading="lazy">
-                        <div class="gallery-overlay">
-                            <p class="gallery-caption" data-key="leadership-caption-3">Community Leadership</p>
-                        </div>
-                    </div>
-                    <div class="gallery-item">
-                        <img src="l4.jpg" alt="Youth advocacy and policy formulation in environmental conservation" class="gallery-img" loading="lazy">
-                        <div class="gallery-overlay">
-                            <p class="gallery-caption" data-key="leadership-caption-4">Policy Advocacy</p>
-                        </div>
-                    </div>
-                    <div class="gallery-item">
-                        <img src="l7.jpg" alt="Regional leadership conferences and East Africa Community Youth Parliament activities" class="gallery-img" loading="lazy">
-                        <div class="gallery-overlay">
-                            <p class="gallery-caption" data-key="leadership-caption-7">Regional Conferences</p>
-                        </div>
-                    </div>
-                    <div class="gallery-item">
-                        <img src="l8.jpg" alt="Youth leadership summits and climate action advocacy events" class="gallery-img" loading="lazy">
-                        <div class="gallery-overlay">
-                            <p class="gallery-caption" data-key="leadership-caption-8">Climate Summits</p>
+                            <p class="gallery-caption" data-key="leadership-caption-1">Youth Parliament</p>
                         </div>
                     </div>
                 </div>
@@ -373,50 +371,14 @@
                 </div>
             </div>
             
-            <!-- Environmental Projects Gallery -->
+            <!-- Environmental Projects Gallery — single representative image -->
             <div class="environmental-gallery">
                 <h3 class="gallery-title" data-key="env-gallery-title">Environmental Conservation Projects</h3>
                 <div class="image-gallery">
-                    <div class="gallery-item">
-                        <img src="env.JPG" alt="Environmental conservation landscape and natural habitat protection work" class="gallery-img" loading="lazy">
+                    <div class="gallery-item single-image-card">
+                        <img src="env.JPG" alt="Environmental conservation - Neema Theonest" class="gallery-img" loading="lazy">
                         <div class="gallery-overlay">
                             <p class="gallery-caption" data-key="env-caption-1">Natural Habitat Conservation</p>
-                        </div>
-                    </div>
-                    <div class="gallery-item">
-                        <img src="env2.jpg" alt="Environmental fieldwork and ecosystem restoration activities" class="gallery-img" loading="lazy">
-                        <div class="gallery-overlay">
-                            <p class="gallery-caption" data-key="env-caption-2">Ecosystem Restoration</p>
-                        </div>
-                    </div>
-                    <div class="gallery-item">
-                        <img src="plant.jpg" alt="Tree planting and reforestation project implementation" class="gallery-img" loading="lazy">
-                        <div class="gallery-overlay">
-                            <p class="gallery-caption" data-key="plant-caption-1">Reforestation Projects</p>
-                        </div>
-                    </div>
-                    <div class="gallery-item">
-                        <img src="plant2.jpg" alt="Community tree planting and environmental education programs" class="gallery-img" loading="lazy">
-                        <div class="gallery-overlay">
-                            <p class="gallery-caption" data-key="plant-caption-2">Community Planting</p>
-                        </div>
-                    </div>
-                    <div class="gallery-item">
-                        <img src="plant3.jpg" alt="School environmental programs and youth tree planting initiatives" class="gallery-img" loading="lazy">
-                        <div class="gallery-overlay">
-                            <p class="gallery-caption" data-key="plant-caption-3">School Programs</p>
-                        </div>
-                    </div>
-                    <div class="gallery-item">
-                        <img src="plant4.jpg" alt="Sustainable agriculture and environmental conservation training" class="gallery-img" loading="lazy">
-                        <div class="gallery-overlay">
-                            <p class="gallery-caption" data-key="plant-caption-4">Sustainable Agriculture</p>
-                        </div>
-                    </div>
-                    <div class="gallery-item">
-                        <img src="Plant5.jpg" alt="Environmental restoration and community engagement in conservation efforts" class="gallery-img" loading="lazy">
-                        <div class="gallery-overlay">
-                            <p class="gallery-caption" data-key="plant-caption-5">Community Conservation</p>
                         </div>
                     </div>
                 </div>
@@ -459,14 +421,14 @@
                 </div>
             </div>
             
-            <div class="social-links">
-                <a href="#" class="social-link" aria-label="LinkedIn">
+                <div class="social-links">
+                <a href="https://www.linkedin.com/in/neema-theonest-05a93832a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" class="social-link" aria-label="LinkedIn - Neema Theonest" target="_blank" rel="noopener noreferrer">
                     <i class="fab fa-linkedin"></i>
                 </a>
                 <a href="#" class="social-link" aria-label="Twitter">
                     <i class="fab fa-twitter"></i>
                 </a>
-                <a href="#" class="social-link" aria-label="Instagram">
+                <a href="https://www.instagram.com/official_neyleetheonest?igsh=MWdjY2pkZHVldm1lZw==" class="social-link" aria-label="Instagram - Neema Theonest" target="_blank" rel="noopener noreferrer">
                     <i class="fab fa-instagram"></i>
                 </a>
                 <a href="#" class="social-link" aria-label="Facebook">
@@ -523,32 +485,14 @@
                 </div>
             </div>
             
-            <!-- Youth Entrepreneurship & Meetings Gallery -->
+            <!-- Youth Entrepreneurship & Meetings Gallery — single representative image -->
             <div class="meetings-gallery">
                 <h3 class="gallery-title" data-key="meetings-gallery-title">Youth Entrepreneurship & Advocacy Meetings</h3>
                 <div class="image-gallery">
-                    <div class="gallery-item">
-                        <img src="meeting3.jpg" alt="Youth entrepreneurship training sessions and business development workshops" class="gallery-img" loading="lazy">
+                    <div class="gallery-item single-image-card">
+                        <img src="meeting3.jpg" alt="Youth entrepreneurship and advocacy - Neema Theonest" class="gallery-img" loading="lazy">
                         <div class="gallery-overlay">
                             <p class="gallery-caption" data-key="meeting-caption-3">Entrepreneurship Workshops</p>
-                        </div>
-                    </div>
-                    <div class="gallery-item">
-                        <img src="meeting4.jpg" alt="Strategic planning meetings for youth empowerment and advocacy initiatives" class="gallery-img" loading="lazy">
-                        <div class="gallery-overlay">
-                            <p class="gallery-caption" data-key="meeting-caption-4">Strategic Planning</p>
-                        </div>
-                    </div>
-                    <div class="gallery-item">
-                        <img src="meeting6.jpg" alt="Youth advocacy meetings and policy discussion forums for environmental action" class="gallery-img" loading="lazy">
-                        <div class="gallery-overlay">
-                            <p class="gallery-caption" data-key="meeting-caption-6">Policy Forums</p>
-                        </div>
-                    </div>
-                    <div class="gallery-item">
-                        <img src="meeting8.jpg" alt="Community engagement meetings and stakeholder consultations for youth programs" class="gallery-img" loading="lazy">
-                        <div class="gallery-overlay">
-                            <p class="gallery-caption" data-key="meeting-caption-8">Stakeholder Consultations</p>
                         </div>
                     </div>
                 </div>
@@ -572,52 +516,10 @@
                 </div>
                 
                 <div class="charity-gallery">
-                    <div class="charity-image">
-                        <img src="charity.jpg" alt="Neema Theonest engaged in charitable work, visiting and supporting local communities in Tanzania" class="charity-img" loading="lazy">
-                        <div class="gallery-overlay">
-                            <p class="gallery-caption" data-key="charity-caption-1">Community Support</p>
-                        </div>
-                    </div>
-                    <div class="charity-image">
-                        <img src="charity2.jpg" alt="Neema Theonest helping vulnerable groups through organized charitable programs and community outreach" class="charity-img" loading="lazy">
-                        <div class="gallery-overlay">
-                            <p class="gallery-caption" data-key="charity-caption-2">Vulnerable Groups Support</p>
-                        </div>
-                    </div>
-                    <div class="charity-image">
-                        <img src="charity3.jpg" alt="Community charitable initiatives and resource distribution programs for those in need" class="charity-img" loading="lazy">
-                        <div class="gallery-overlay">
-                            <p class="gallery-caption" data-key="charity-caption-3">Resource Distribution</p>
-                        </div>
-                    </div>
-                    <div class="charity-image">
-                        <img src="givingback.jpg" alt="Community support and giving back initiatives led by Neema Theonest, providing resources to those in need" class="charity-img" loading="lazy">
+                    <div class="charity-image single-image-card">
+                        <img src="givingback.jpg" alt="Giving back - Neema Theonest" class="charity-img" loading="lazy">
                         <div class="gallery-overlay">
                             <p class="gallery-caption" data-key="givingback-caption-1">Giving Back Programs</p>
-                        </div>
-                    </div>
-                    <div class="charity-image">
-                        <img src="givingback2.JPG" alt="Large-scale community giving back events and charitable distribution activities" class="charity-img" loading="lazy">
-                        <div class="gallery-overlay">
-                            <p class="gallery-caption" data-key="givingback-caption-2">Community Events</p>
-                        </div>
-                    </div>
-                    <div class="charity-image">
-                        <img src="givingback3.jpg" alt="Educational support and resource sharing with local communities and schools" class="charity-img" loading="lazy">
-                        <div class="gallery-overlay">
-                            <p class="gallery-caption" data-key="givingback-caption-3">Educational Support</p>
-                        </div>
-                    </div>
-                    <div class="charity-image">
-                        <img src="givingback4.jpg" alt="Healthcare and wellness support initiatives for underserved communities" class="charity-img" loading="lazy">
-                        <div class="gallery-overlay">
-                            <p class="gallery-caption" data-key="givingback-caption-4">Healthcare Support</p>
-                        </div>
-                    </div>
-                    <div class="charity-image">
-                        <img src="givingback6.JPG" alt="Community empowerment and capacity building through charitable giving back programs" class="charity-img" loading="lazy">
-                        <div class="gallery-overlay">
-                            <p class="gallery-caption" data-key="givingback-caption-6">Community Empowerment</p>
                         </div>
                     </div>
                 </div>
@@ -659,7 +561,7 @@
                         </div>
                         <div class="contact-details">
                             <h4 data-key="contact-email-label">Email</h4>
-                            <a href="mailto:neema.theonest@example.com">neema.theonest@example.com</a>
+                            <a href="mailto:neematheonest67@gmail.com">neematheonest67@gmail.com</a>
                         </div>
                     </div>
                     
@@ -669,7 +571,7 @@
                         </div>
                         <div class="contact-details">
                             <h4 data-key="contact-phone-label">Phone</h4>
-                            <a href="tel:+255123456789">+255 123 456 789</a>
+                            <a href="tel:0621833674">0621833674</a>
                         </div>
                     </div>
                     
@@ -722,13 +624,13 @@
                 </div>
                 
                 <div class="footer-social">
-                    <a href="#" class="footer-social-link" aria-label="LinkedIn">
+                    <a href="https://www.linkedin.com/in/neema-theonest-05a93832a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" class="footer-social-link" aria-label="LinkedIn - Neema Theonest" target="_blank" rel="noopener noreferrer">
                         <i class="fab fa-linkedin"></i>
                     </a>
                     <a href="#" class="footer-social-link" aria-label="Twitter">
                         <i class="fab fa-twitter"></i>
                     </a>
-                    <a href="#" class="footer-social-link" aria-label="Instagram">
+                    <a href="https://www.instagram.com/official_neyleetheonest?igsh=MWdjY2pkZHVldm1lZw==" class="footer-social-link" aria-label="Instagram - Neema Theonest" target="_blank" rel="noopener noreferrer">
                         <i class="fab fa-instagram"></i>
                     </a>
                     <a href="#" class="footer-social-link" aria-label="Email">
